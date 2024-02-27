@@ -62,7 +62,7 @@ public class HlavniProgram {
             tazenaCisla.add(tazeneCislo);
         }
 
-        System.out.println("Státní notář ověřil tah a vylosované čísla jsou platná.");
+        System.out.println("Státní notář ověřil tah a vylosovaná čísla jsou platná.");
     }
 
     private static void overCislo(Integer cislo) {
