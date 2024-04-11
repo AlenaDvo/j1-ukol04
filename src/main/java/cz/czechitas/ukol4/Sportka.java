@@ -3,7 +3,6 @@ package cz.czechitas.ukol4;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Třída pro losování Sportky.
@@ -27,7 +26,7 @@ public class Sportka {
      * @see Collections#shuffle(List)
      */
     public void zamichej() {
-        Collections.shuffle(osudi, new Random());
+        Collections.shuffle(osudi);
     }
 
     /**
@@ -37,10 +36,7 @@ public class Sportka {
      * @see List#subList(int, int)
      */
     public List<Integer> dejVylosovanaCisla() {
-        List<Integer> vylosovanaCisla = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            vylosovanaCisla.add(osudi.get(i));
-        }
+        List<Integer> vylosovanaCisla = osudi.subList(0, 6);
         Collections.sort(vylosovanaCisla);
         return vylosovanaCisla;
     }
